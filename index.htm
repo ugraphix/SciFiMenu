@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>A6: Sci-Food Form</title>
+    
+    
+    	
+<script src="include/util.js" type="text/javascript"></script><!-- utility file of handy JS functions -->
+    
+	<link rel="stylesheet" type="text/css" href="include/styles.css" /><!-- optional stylesheet reference -->
+	
+      <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		//place local js code here
+		
+		
+		
+		//here we make sure the user has entered valid data	
+		function checkForm(thisForm)
+		{//check form data for valid info
+			
+			
+			if(empty(thisForm.Appetizer,"Please check a box for an appetizer")){return false;}
+						
+			if(empty(thisForm.Course,"Please check a box for a main course")){return false;}
+				 
+					
+			if(empty(thisForm.Sides,"Please check a box for a side")){return false;}
+				
+			if(empty(thisForm.Beverage,"Please check a box for a beverage")){return false;}
+						
+			if(empty(thisForm.Dessert,"Please check a box for a dessert")){return false;}
+			return true;//if all is passed, submit!
+		}
+		
+			
+		
+		
+		$('document').ready(function(){
+		$('.appetizer').hide();
+		$('.course').hide();
+		$('.side').hide();
+		$('.beverage').hide();
+		$('.dessert').hide();
+			
+		$('#app2').hide()
+		//$('#course2').hide()
+		$('#side2').hide()
+		$('#beverage2').hide()
+		$('#dessert2').hide()
+		});
+		
+			
+			
+		$('document').ready(function(){
+			$('#toggleAppetizer').click(function(){
+				$('.appetizer').show('slow'); 
+				$('.course').hide();
+				$('.side').hide();
+				$('.beverage').hide();
+				$('.dessert').hide();
+				
+		});
+			});
+			
+			
+	
+		$('document').ready(function(){
+			$('#toggleMainCourse').click(function(){
+				$('.course').show('slow'); 
+				$('.appetizer').hide();
+				$('.side').hide();
+				$('.beverage').hide();
+				$('.dessert').hide();
+		});
+			});
+			
+			
+			$('document').ready(function(){
+			$('#toggleSides').click(function(){
+				$('.side').show('slow');
+				$('.course').hide();
+				$('.appetizer').hide();
+				$('.beverage').hide();
+				$('.dessert').hide();
+		});
+			});
+
+			
+			
+			
+			$('document').ready(function(){
+			$('#toggleBeverage').click(function(){
+				$('.beverage').show('slow');
+				$('.course').hide(); 
+				$('.appetizer').hide(); 
+				$('.side').hide(); 
+				$('.dessert').hide(); 
+		});
+			});
+
+ 
+ 
+ 			$('document').ready(function(){
+			$('#toggleDessert').click(function(){
+				$('.dessert').show('slow');
+				$('.course').hide();
+				$('.appetizer').hide();
+				$('.side').hide();
+				$('.beverage').hide();
+		});
+			});
+			
+			
+
+			
+			
+			
+			
+		//Appetizer	
+			$('document').ready(function(){
+				$('#app1').hide();
+				$('#app2').hide();
+			$('#toggleApp1').click(function(){
+				$('#app2').find('input[type=checkbox]:checked').each(function() 
+				{ 
+    				$(this).prop('checked', false); 
+				});
+				$('#app2').hide();
+				$('#app1').slideDown();
+			});
+			});
+			
+			
+				$('document').ready(function(){
+				$('#app2').hide();
+				$('#app1').hide();
+			$('#toggleApp2').click(function(){
+				$('#app1').find('input[type=checkbox]:checked').each(function() 
+				{ 
+    				$(this).prop('checked', false); 
+				});
+				$('#app1').hide();
+				$('#app2').slideDown();
+			});
+			});
+			
+			
+			
+			//Main Course
+					$('document').ready(function(){
+				$('#crs1').hide();
+				$('#crs2').hide();
+			$('#toggleCrs1').click(function(){
+			$('#crs2').find('input[type=checkbox]:checked').each(function() 
+				{ 
+    				$(this).prop('checked', false); 
+				});
+				$('#crs2').hide();
+				$('#crs1').slideDown();
+			});
+			});
+		
+		
+					$('document').ready(function(){
+				$('#crs2').hide();
+				$('#crs1').hide();
+			$('#toggleCrs2').click(function(){
+				$('#crs1').find('input[type=checkbox]:checked').each(function() 
+				{ 
+    				$(this).prop('checked', false); 
+				});
+				$('#crs1').hide();
+				$('#crs2').slideDown();
+			});
+			});
+			
+			
+		//Sides	
+				$('document').ready(function(){
+				$('#sde1').hide();
+				$('#sde2').hide();
+			$('#toggleSde1').click(function(){
+				$('#sde2').find('input[type=checkbox]:checked').each(function() 
+				{ 
+    				$(this).prop('checked', false); 
+				});
+				$('#sde2').hide();
+				$('#sde1').slideDown();
+			});
+			});
+			
+				$('document').ready(function(){
+				$('#sde2').hide();
+				$('#sde1').hide();
+			$('#toggleSde2').click(function(){
+					$('#sde1').find('input[type=checkbox]:checked').each(function() 
+				{ 
+    				$(this).prop('checked', false); 
+				});
+				$('#sde1').hide();
+				$('#sde2').slideDown();
+			});
+			});
+			
+			
+			
+			
+		//Beverages
+				$('document').ready(function(){
+				$('#bev1').hide();
+				$('#bev3').hide();
+			$('#toggleBev1').click(function(){
+					$('#bev3').find('input[type=checkbox]:checked').each(function() 
+				{ 
+    				$(this).prop('checked', false); 
+				});
+				$('#bev3').hide();
+				$('#bev1').slideDown();
+			});
+			});
+				
+				
+				$('document').ready(function(){
+				$('#bev3').hide();
+				$('#bev1').hide();
+			$('#toggleBev3').click(function(){
+					$('#bev1').find('input[type=checkbox]:checked').each(function() 
+				{ 
+    				$(this).prop('checked', false); 
+				});
+				$('#bev1').hide();
+				$('#bev3').slideDown();
+			});
+			});
+			
+			
+			
+			
+			
+			
+			
+			//Dessert
+				$('document').ready(function(){
+				$('#dess1').hide();
+				$('#dess2').hide();
+			$('#toggleDess1').click(function(){
+					$('#dess2').find('input[type=checkbox]:checked').each(function() 
+				{ 
+    				$(this).prop('checked', false); 
+				});
+				$('#dess2').hide();
+				$('#dess1').slideDown();
+			});
+			});
+			
+				$('document').ready(function(){
+				$('#dess2').hide();
+				$('#dess1').hide();
+			$('#toggleDess3').click(function(){
+					$('#dess1').find('input[type=checkbox]:checked').each(function() 
+				{ 
+    				$(this).prop('checked', false); 
+				});
+				$('#dess1').hide();
+				$('#dess2').slideDown();
+			});
+			});
+			
+			
+			
+	
+			
+			
+			
+			
+ 	
+			
+			
+
+
+
+$(document).ready(function () {
+   $("input[name='Appetizer']").change(function () {
+      var maxAllowed = 2;
+      var cnt = $("input[name='Appetizer']:checked").length;
+      if (cnt > maxAllowed)
+      {
+         $(this).prop("checked", "");
+         alert('You may only select a maximum of ' + maxAllowed + ' appetizers!');
+     }
+  });
+});
+
+
+
+
+
+
+$(document).ready(function () {
+   $("input[name='Course']").change(function () {
+      var maxAllowed = 1;
+      var cnt = $("input[name='Course']:checked").length;
+      if (cnt > maxAllowed)
+      {
+         $(this).prop("checked", "");
+         alert('You may only select  ' + maxAllowed + ' course!');
+     }
+  });
+});
+
+
+
+
+		
+	
+
+			
+			
+</script>
+    
+    
+    
+    
+</head>
+
+<body>
+<h1 align="center">Menu Order Form</h1>
+<p align="center">SCI FI delicacies.</p>
+<form action="http://www.newmanic.com/formtest.asp" method="post" name="myForm" onsubmit="return checkForm(this);">
+
+	<table border="1" style="border-collapse:collapse" align="center">
+		
+        <tr>
+			<td colspan="2" width="328" align="center"><input type="button" value="Appetizers" id="toggleAppetizer" /></td>
+		</tr>
+		
+        
+       
+        <tr class="appetizer"><td width="144" align="center" ><h3>Appetizers:</h3></td>
+        
+        		<td width="184">
+            	
+                <div id="appetizer1"><p><input type="button" value="Star Trek" id="toggleApp1" /></p></div>
+				 <div id="app1"><p><input type="checkbox" value="Heart of Targ" name="Appetizer" class="app1" /><b>Heart of Targ</b> <br /></p>
+								<img src="images/targ.jpg" alt="targ" />
+								A traditional Klingon dish, a Targ heart (Klingon boars) is believed to bring courage to the warrior who eats it.
+								
+								<p><input type="checkbox" value="Hasperat" name="Appetizer" class="app1" /><b> Hasperat  </b> <br /></p>
+								<img src="images/hasperat.jpg" alt="hasperat" />
+								A well known spicy Bajoran food, it is cooked in a special brine which scorches the tongue if done right.
+		 	    				
+								<p><input type="checkbox" value="Algae Puffs" name="Appetizer" class="app1" /><b> Algae Puffs  </b> <br /></p>
+								<img src="images/puffs.jpg" alt="puffs" />
+								A local baked Enaran delicacy.
+								</div>
+								
+								
+                 <div id="appetizer2"><p><input type="button" value="Harry Potter" id="toggleApp2" /></p></div>
+				 <div id="app2"><p><input type="checkbox" value="Fortress du Fromage" name="Appetizer" class="app1" /><b> Fortress du Fromage</b> <br /></p>
+									<img src="images/cheese.jpg" alt="cheese" /><br />
+									Sliced cheese served with a cracker assortment, stabbed with toothpicks that are gold and silver star-tipped wands
+								<p><input type="checkbox" value="Hogwarts Brie" name="Appetizer" class="app1" /><b> Official Hogwarts Brie</b> <br /></p>
+									<img src="images/brie.jpg" alt="brie" /><br />
+									 A small round of brie cheese, wrapped in puff pastry, brushed with butter, with a crispy crust.
+		 	    				<p><input type="checkbox" value="Parchment Scrolls" name="Appetizer" class="app1" /><b> Parchment Scrolls </b> <br /></p>
+									<img src="images/scrolls.jpg" alt="scrolls" />
+									Meat and cheese rolled in flat bread to replicate real magical scrolls!
+									</div>
+            
+            </td>
+            </tr>
+       
+       
+       
+       <tr>
+			<td colspan="2" align="center"><input type="button" value="Main Courses" id="toggleMainCourse" /></td>
+		</tr>
+               
+        <tr class="course"><td width="184" align="center"><h3>Main Courses:</h3></td>
+			<td width="184">
+               
+                   	<div id="course1"><p><input type="button" value="Star Trek" id="toggleCrs1" /></p></div>
+				 	<div id="crs1"><p><input type="checkbox" value="Luhvian Quail" name="Course" class="course1" /><b> Luhvian Quail </b> <br /></p>
+									<img src="images/quail.jpg" alt="quail" />	
+									A small bird of similar to the Earth quail and served in truffle sauce, it makes a fine starter to any multi-course dinner.
+					
+								<p><input type="checkbox" value="Seltin Pate" name="Course" class="course1" /><b> Seltin Pate </b> <br /></p>
+								<img src="images/pate.jpg" alt="pate" />
+								Traditionally made with wood fungus from the Seltin planet, this pate is a delicious appetizer for lunch or parties.
+								
+								</div>
+		 	    				
+                 	<div id="course2"><p><input type="button" value="Harry Potter" id="toggleCrs2" /></p></div>
+				 	<div id="crs2"><p><input type="checkbox" value="Quidditch Players Pie" name="Course" class="course2" /><b> Quidditch Players Pie </b> <br /></p>
+										<img src="images/quidditch.jpg" alt="quidditch" />
+										Quidditch players need a hearty meal like shepherd's pie to energize them for the match. As Fleur Delacour says, "Zis 'eavy 'ogwarts food."
+								<p><input type="checkbox" value="Beef, Lamb, and Guinness Stew" name="Course" class="course2" /><b> Beef, Lamb, and Guinness Stew </b> <br /></p>
+									<img src="images/stew.jpg" alt="stew" />
+									Served at the Leaky Cauldron, beef, lamb and Guinness stew is originally in a bread bowl but can be made like a pot pie if you prefer pastry dough.
+								
+								</div>
+		 
+			</td>
+		</tr>
+        
+        
+        
+        <tr>
+			<td colspan="2" align="center"><input type="button" value="Sides" id="toggleSides" /></td>
+		</tr>
+        
+       
+        
+        <tr class="side"><td width="184" align="center"><h3>Sides:</h3></td>
+			<td width="184">
+            
+            		<div id="side1"><p> <input type="button" value="Star Trek" id="toggleSde1" /></p> </div>
+				 	<div id="sde1"><p> <input type="checkbox" value="Plomeek Soup" name="Sides" class="side1" /><b> Plomeek Soup  </b> <br /></p>
+										<img src="images/soup.jpg" alt="soup" />
+										Plomeek soup is a traditional dish on the Vulcan home world. Taking a page from the mostly vegetarian Vulcans, the Earth version is vegan-friendly.
+					
+					
+								<p> <input type="checkbox" value="Parthas a la Yuta" name="Sides" class="side1" /><b> Parthas a la Yuta </b> <br /></p>
+									<img src="images/yuta.jpg" alt="yuta" />
+									A delicacy prepared by Yuta: the parthas plant, a green vegetable with fleshy roots .
+								
+                               <p> <input type="checkbox" value="Yalasat" name="Sides" class="side1" /><b> Yalasat (stuffed cabbage) </b> <br /></p>
+									<img src="images/yalasat.jpg" alt="yalasat" />
+									 Of the Torothan homeworld, they have Yalasat, a type of cactus. This dish is nicely flavored by apples and dried fruit. 
+								</div>
+		 	    				
+                 	<div id="side1"><p> <input type="button" value="Harry Potter" id="toggleSde2" /></p> </div>
+				 	<div id="sde2"><p> <input type="checkbox" value="Yorkshire Pudding" name="Sides" class="side2" /><b> Yorkshire Pudding </b> <br /></p>
+										<img src="images/pudding.jpg" alt="pudding" />
+										Made from batter consisting of eggs, flour, and milk. The dish is usually served with roast meat and gravy.
+								<p> <input type="checkbox" value="Frogs Eye Salad" name="Sides" class="side2" /><b> Frogs Eye Salad </b> <br /></p>
+									<img src="images/frog.jpg" alt="frog" />
+									Acinidi pepe (small round pasta) mixed with lentils, mushrooms and peas. 
+                               <p> <input type="checkbox" value="Pumpkin Fries " name="Sides" class="side2" /><b>  Pumpkin Fries</b> <br /></p>
+									<img src="images/fries.jpg" alt="fries" />
+									Pumpkin steak cut fries, fried to crispy perfection!
+								</div>
+			</td>
+		</tr>
+        
+        
+        <tr>
+			<td colspan="2" align="center"><input type="button" value="Beverages" id="toggleBeverage" /></td>
+		</tr>
+        
+        
+           <tr class="beverage"><td align="center"><h3>Beverages:</h3></td>
+			<td width="184">
+            	<div id="beverage1"><p> <input type="button" value="Star Trek" id="toggleBev1" /></div>
+				 	<div id="bev1"><p> <input type="checkbox" value="Trixian Bubble Juice " name="Beverage" class="bev1" /><b> Trixian Bubble Juice  </b> <br /></p>
+										<img src="images/bubble.jpg" alt="bubble" />
+										Trixian bubble juice was an alcoholic pink beverage served at Quark's on Deep Space Nine. It is a carbonated beverage made with fruit nectar.
+								<p> <input type="checkbox" value="Raktajino" name="Beverage" class="bev1" /><b> Raktajino </b> <br /></p>
+									<img src="images/raktajino.jpg" alt="raktajino" />
+								The favorite drink of the swing shift and Starfleet captains alike. While a Klingon drink, it seems to be almost more popular with many other races than with the Klingons on Deep Space Nine. Made with ground Turkish coffee, cardamom, and cream. 
+								
+								</div>
+		 	    				
+                 
+				
+                
+                 <div id="beverage3"><p> <input type="button" value="Harry Potter" id="toggleBev3" /></div>	
+                 	<div id="bev3"><p> <input type="checkbox" value="Butterbeer" name="Beverage" class="bev3" /><b> Butterbeer </b> <br /></p>
+										<img src="images/beer.jpg" alt="beer" />
+										Hot or cold, butterbeer, made with real butter and beer, is a staple to take the edge off.
+					
+								<p> <input type="checkbox" value="Pumpkin Juice" name="Beverage" class="bev3" /><b> Pumpkin Juice </b> <br /></p>
+									<img src="images/juice.jpg" alt="juice" />
+									Muggles drink OJ, but wizards subside off of pumpkin juice morning, noon, and night.
+								
+								
+								</div>
+                 
+                 
+			</td>
+		</tr>
+        
+        
+         <tr>
+			<td colspan="2" align="center"><input type="button" value="Desserts" id="toggleDessert" /></td>
+		</tr>
+        
+        
+              <tr class="dessert"><td align="center"><h3>Desserts:</h3></td>
+			<td width="184">
+            <div id="dessert1"><p><input type="button" value="Star Trek" id="toggleDess1" /></p></div>
+				 <div id="dess1"><p><input type="checkbox" value="Rokeg Blood Pie" name="Dessert" class="dess1" /><b> Rokeg Blood Pie </b> <br /></p>
+									<img src="images/pie.jpg" alt="pie" />
+									An ancient Klingon recipe, Rokeg blood pie is served during their 'Day of Honor' holiday. In direct contrast to the Vulcans, this dish is decidedly not vegan friendly.
+				 
+				 
+								<p><input type="checkbox" value="Jumba Stick" name="Dessert" class="dess1" /> <b>Jumba Stick</b> <br /></p>
+								<img src="images/jumba.jpg" alt="jumba" />
+								Made from the sap of the Bajoran jumja tree, these confections are notable for their insane sweetness.
+								</div>
+                
+                 
+				
+                <div id="dessert3"><p><input type="button" value="Harry Potter" id="toggleDess3" /></p></div>
+                <div id="dess2"><p><input type="checkbox" value="Acid Pops" name="Dessert" class="dess2" /> Acid Pops</b> <br /></p>
+									<img src="images/acid.jpg" alt="acid" />
+									Dipped supersour lollipops in honey, and rolled in Pop Rocks for crackling effect.
+								<p><input type="checkbox" value="Treacle Tart" name="Dessert" class="dess2" /> Treacle Tart</b> <br /></p>
+									<img src="images/tart.jpg" alt="tart" />
+									Harry's favorite dessert features a shortbread crust and golden syrup filling.
+								
+								</div>
+			</td>
+		</tr>
+         
+		
+        
+        
+		<tr>
+			<td colspan="2" align="center"><input type="submit" value="submit" /></td>
+		</tr>
+    </table>
+    </form>
+</body>
+</html>
